@@ -19,6 +19,7 @@
     "commander": "^12.1.0",
     "download-git-repo": "^3.0.2",
     "fs-extra": "^11.2.0",
+    "https": "^1.0.0",
     "inquirer": "^10.0.1",
     "ora": "^8.0.1",
     "util": "^0.12.5"

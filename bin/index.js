@@ -11,8 +11,12 @@ const program = new Command();
 program
   .command('create <app-name>')  // 创建命令
   .description('create a new project') // 命令描述
+  .option('-f, --force', 'overwrite target directory if it exists', false) // 选项
+
   .action((name, options, cmd) => {
-    create(name,options,cmd);
+    import('../lib/create.js').then(({ default: create }) => {
+      create(name, options, cmd);
+    });
   });
 
 program.on('--help', () => {
